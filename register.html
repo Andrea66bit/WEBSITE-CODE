@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | BOží Music</title>
+  <link rel="stylesheet" href="login-register.css" />
+</head>
+<body>
+  <div class="auth-box">
+    <form id="registerForm">
+      <h2>Register</h2>
+      <input type="email" id="registerEmail" placeholder="Email" required />
+      <input type="password" id="registerPassword" placeholder="Password" required />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+      <button type="submit">Register</button>
+
+      <p class="alt-login-text">Or sign up with:</p>
+      <div class="social-buttons">
+        <button class="google" type="button" onclick="socialLogin('Google')">Google</button>
+        <button class="facebook" type="button" onclick="socialLogin('Facebook')">Facebook</button>
+      </div>
+
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("registerEmail").value;
+      const password = document.getElementById("registerPassword").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+
+      alert("Registration successful! Redirecting to login...");
+      window.location.href = "login.html";
+    });
+
+    function socialLogin(provider) {
+      alert(`${provider} sign-up simulated! Redirecting to homepage...`);
+      sessionStorage.setItem("loggedIn", "true");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
+
