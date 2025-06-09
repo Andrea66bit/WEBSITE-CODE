@@ -192,7 +192,7 @@ body{
 
 .container main .trending .left .info h5{
     margin-left: 12px;
-    color: #919191;
+    color: #fff4f4;
 }
 
 .container main .trending .left .info .buttons{
@@ -221,8 +221,10 @@ body{
 }
 
 .container main .trending img{
-    width: 300px;
-    height: 200px;
+    position: center left;
+    inset: 0;
+    width: 100%;
+    max-width: 300px
 }
 
 .container main .playlist{
@@ -274,31 +276,31 @@ body{
 }
 
 .container main .playlist .genres .items .item:nth-child(1){
-    background-color: #476a8a;
+    background-color: #fbff00;
 }
 
 .container main .playlist .genres .items .item:nth-child(2){
-    background-color: #a69984;
+    background-color: #000000;
 }
 
 .container main .playlist .genres .items .item:nth-child(3){
-    background-color: #a24c34;
+    background-color: #000000;
 }
 
 .container main .playlist .genres .items .item:nth-child(4){
-    background-color: #0d4045;
+    background-color: #fbff00;
 }
 
 .container main .playlist .genres .items .item:nth-child(5){
-    background-color: #a67894;
+    background-color: #fbff00;
 }
 
 .container main .playlist .genres .items .item:nth-child(6){
-    background-color: #5547a5;
+    background-color: #000000;
 }
 
 .container main .playlist .music-list{
-    background-color: #202026;
+    background-color: #000000;
     padding: 20px;
     color: #fff;
     border-radius: 6px;
@@ -344,15 +346,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #32323d;
+    background-color: #ffffff;
     padding: 6px;
-    border: 2px solid #464748;
+    border: 2px solid #000000;
     border-radius: 6px;
 }
 
 .container main .playlist .music-list .items .item .actions .icon i{
     font-size: 10px;
-    color: #5773ff;
+    color: #000000;
 }
 
 .container main .playlist .music-list .items .item .actions i{
@@ -397,7 +399,7 @@ body{
 
 .container .right-section .music-player{
     color: #fff;
-    background-color: #202026;
+    background-color: #000000;
     border-radius: 6px;
     height: 88%;
     display: flex;
@@ -412,7 +414,7 @@ body{
 .container .right-section .music-player .header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: baseline;
     margin-bottom: 30px;
 }
 
@@ -517,6 +519,7 @@ body{
     align-items: center;
     position: absolute;
     bottom: 8px;
+    
 }
 
 .container main header .nav-links button,
@@ -804,3 +807,17 @@ body {
     height: auto;
     border-radius: 10px;
 }
+
+.trend-img {
+    object-fit: cover;
+    object-position: left center;
+    border-radius: 34px;
+    width: 300px;
+    height: 200px;
+}
+
+.trend-img {
+    display: block;
+    margin: 0 auto;
+}
+
